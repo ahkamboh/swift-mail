@@ -3,19 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-  }
+  --smoky-black: hsl(245, 100%, 50%);
 }
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,10 +16,222 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    overflow-x: hidden;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+
+@font-face {
+  font-family: 'ClashDisplay-Bold';
+  src: url('/fonts/ClashDisplay-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Extralight';
+  src: url('/fonts/ClashDisplay-Extralight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Light';
+  src: url('/fonts/ClashDisplay-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Medium';
+  src: url('/fonts/ClashDisplay-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Regular';
+  src: url('/fonts/ClashDisplay-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Semibold';
+  src: url('/fonts/ClashDisplay-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ClashDisplay-Semibold{
+  font-family: 'ClashDisplay-Semibold' , sans-serif;
+}
+.ClashDisplay-Regular{
+  font-family: 'ClashDisplay-Regular' , sans-serif;
+}
+.ClashDisplay-Bold{
+  font-family: 'ClashDisplay-Bold' , sans-serif;
+}
+.ClashDisplay-Light{
+  font-family: 'ClashDisplay-Light' , sans-serif;
+}
+
+.ClashDisplay-Medium{
+  font-family: 'ClashDisplay-Medium' , sans-serif;
+}
+
+
+body::-webkit-scrollbar {
+  width: 20px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  border: 3px solid var(--smoky-black);
+  background: hsla(0, 0%, 100%, 0.1);
+  border-radius: 20px;
+  box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+    inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 100%, 0.15);
+}
+
+
+body {
+  scroll-behavior: smooth;
+}
+.gradient-text {
+  background: linear-gradient(90deg, #FF3BFF 0%, #ECBFBB 38%, #5C24FF 76%, #D94FD5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-border-button {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  width: 100%; /* Ensure the same width */
+  height: 100%; /* Ensure the same height */
+}
+
+.gradient-border-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(to right, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5);
+  border-radius: 32px;
+  z-index: -1;
+  transition: background-position 0.3s ease; /* Smooth transition */
+  background-size: 200% 200%; /* Ensures the gradient is large enough to animate */
+}
+
+.gradient-border-button::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #000;
+  border-radius: 28px;
+  z-index: -1;
+}
+
+.gradient-border-button:hover::before {
+  animation: gradient-animation 3s linear infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
+
+.btn {
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+  transition: 1s ease;
+  width: 100%; /* Ensure the same width */
+  height: 100%; /* Ensure the same height */
+  border-radius: 30px; /* Match the rounded corners */
+  position: relative;
+}
+
+.bg-btn {
+  transform: translateY(100%);
+  width: 100%;
+  height: 140%;
+  background: linear-gradient(to right, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5);
+  z-index: -2;
+  transition: all 700ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+  transition-timing-function: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+}
+
+.btn:hover .bg-btn {
+  transform: translateY(0%);
+}
+
+.btn span {
+  letter-spacing: 1px;
+  transition: top 0.7s;
+  z-index: 1;
+}
+
+.btn-text-one {
+  color: #ffffff;
+  position: absolute;
+  width: 100%;
+  letter-spacing: 0.05em;
+  top: 50%;
+  left: 0;
+  transform: translateY(-200%);
+  opacity: 0;
+}
+
+.btn-text-two {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-51%);
+}
+
+.btn:hover .btn-text-one {
+  top: 61.5px;
+  opacity: 1;
+}
+.btn:hover .btn-text-one2nd {
+  top: 60px;
+  opacity: 1;
+}
+
+.btn:hover .btn-text-two {
+  top: 159%;
+}
+
+.relative-button-container {
+  width: 192px; /* Ensure the same width */
+  height: 55px; /* Ensure the same height */
+}
+
