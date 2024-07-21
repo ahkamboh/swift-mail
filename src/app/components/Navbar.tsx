@@ -1,7 +1,5 @@
 "use client"
 import React, { useState } from 'react';
-import Image from 'next/image';
-
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -13,7 +11,7 @@ function Navbar() {
     <div>
       <div className="container mx-auto">
         <div className="list-none flex justify-between p-5">
-          <div className="w-[90px] ClashDisplay-Bold ">
+          <div className="w-[90px] ClashDisplay-Bold scale-110 ">
             <h1>EmailGenie</h1>
             <img src="/gradient.png"  alt="gradient" className='w-full relative -top-3.5 -z-20'/>
           </div> 
@@ -33,7 +31,7 @@ function Navbar() {
               </span>
               {/* <a className='sm:block hidden text-white hover:text-blue-500 transition-colors duration-300' href="">Resume</a> */}
             </li>
-            <li className='flex gap-4' >
+            <li className='sm:flex gap-4 hidden ' >
               <img alt='twitter' src='/twitter.png'/>
               <img alt='github' src='/github.png'/>
               <img alt='discord' src='/discord.png'/>

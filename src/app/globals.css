@@ -110,6 +110,9 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+.gradient-background {
+  background: linear-gradient(90deg, #FF3BFF 0%, #ECBFBB 38%, #5C24FF 76%, #D94FD5 100%);
+}
 
 .gradient-border-button {
   position: relative;
@@ -235,3 +238,10 @@ body {
   height: 55px; /* Ensure the same height */
 }
 
+.footer-background{
+  background-image: url(/footer-img.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
