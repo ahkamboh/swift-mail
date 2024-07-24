@@ -32,12 +32,12 @@ export default function Home() {
         <img src="/ai-img-1.svg" alt="" />
         <div className="blur-[20px] bottom-[-70px] absolute h-[100px] bg-black w-full"></div>
       </div>
-      <div className=" ClashDisplay-Medium w-full flex flex-col relative -top-10 text-center justify-center items-center container mx-auto sm:px-14 px-7 ">
-      <img src="/ai-img-1.svg" alt=" " className="blur-[50px] absolute 2xl:-top-36 xl:-top-8   -z-10 "  />
-      <img src="/ai-img-1.svg" alt=" " className="blur-[50px] absolute -top-36  -z-10 "  />
-      <img src="/ai-img-1.svg" alt=" " className="blur-[50px] absolute -bottom-10  -z-10 "  />
-      <img src="/ai-img-1.svg" alt=" " className="blur-[50px] absolute top-[25%]  -z-10 "  />
-      <img src="/ai-img-1.svg" alt=" " className="blur-[50px] absolute top-[55%]  -z-10 "  />
+      <div className="ClashDisplay-Medium w-full flex flex-col relative -top-10 text-center justify-center items-center container mx-auto sm:px-14 px-7 ">
+      <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[50px] absolute 2xl:-top-36 xl:-top-8   -z-10 "  />
+      <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[50px] absolute -top-36 -z-10" />
+      <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[50px] absolute -bottom-10 -z-10"/>
+      <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[50px] absolute top-[25%] -z-10" />
+      <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[50px] absolute top-[55%] -z-10" />
         <h1 className="2xl:text-6xl text-4xl relative 2xl:-top-14 -top-6">How It work</h1>
         <div className="w-full h-full flex-col flex justify-center items-center sm:space-y-10 space-y-7">
           <Step
