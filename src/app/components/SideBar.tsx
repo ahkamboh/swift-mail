@@ -4,10 +4,10 @@ function SideBar() {
   return (
     <div className="col-span-2 p-4 bg-neutral-700 py-4 flex flex-col justify-between">
     <div className="flex flex-col justify-center items-center">
-      <div className="w-[90px] ClashDisplay-Bold scale-110 ">
-        <h1 >EmailGenie</h1>
-        <img src="/gradient.png" alt="gradient" className='w-full relative -top-3.5 -z-20' />
-      </div>
+    <div className="w-[90px] ClashDisplay-Bold scale-125 tracking-widest ">
+            <h1>SwiftMail</h1>
+            <img src="/gradient.png"  alt="gradient" className='w-full relative -top-3.5 -z-20'/>
+          </div> 
       <button className='ClashDisplay-Regular w-full rounded py-1 text-white bg-cyan-600 flex gap-2 justify-center items-center'><img src="/add.svg" alt="" /> New Project</button>
       <div className="p-4 flex flex-col justify-start gap-2 mt-2 w-full">
         <button title="Projects" className='ClashDisplay-Regular flex gap-2 items-center'><img src="/project.svg" alt="Project" /> Projects</button>
