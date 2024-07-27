@@ -12,9 +12,9 @@ function Navbar() {
       <div className="container mx-auto">
         <div className="list-none flex justify-between p-3 px-5">
           <div className=" ClashDisplay-Bold flex sm:gap-4  justify-center items-center">
-          <li className=' sm:h-10 h-8 relative top-0.5 sm:w-10 w-8  object-contain ' >
+          <div className=' sm:h-10 h-8 relative top-0.5 sm:w-10 w-8  object-contain ' >
               <img alt='discord' src='/ourlogo.gif'/>
-            </li>
+            </div>
             <div className="w-[90px] sm:scale-125 scale-100 relative tracking-widest">
               <h1> SwiftMail</h1>
               <img src="/gradient.png"  alt="gradient" className='w-full absolute top-2 -z-20'/>

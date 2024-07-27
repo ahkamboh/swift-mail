@@ -4,19 +4,17 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
   --smoky-black: hsl(245, 100%, 50%);
 }
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-    overflow-x: hidden;
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  overflow-x: hidden;
 }
 
 
@@ -75,6 +73,7 @@ body {
   font-weight: 500;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'futura-book';
   src: url('/fonts/futura-book.ttf') format('opentype');
@@ -82,32 +81,36 @@ body {
   font-style: normal;
 }
 
-.ClashDisplay-Semibold{
-  font-family: 'ClashDisplay-Semibold' , sans-serif;
-}
-.ClashDisplay-Regular{
-  font-family: 'ClashDisplay-Regular' , sans-serif;
-}
-.ClashDisplay-Bold{
-  font-family: 'ClashDisplay-Bold' , sans-serif;
-}
-.ClashDisplay-Light{
-  font-family: 'ClashDisplay-Light' , sans-serif;
+.ClashDisplay-Semibold {
+  font-family: 'ClashDisplay-Semibold', sans-serif;
 }
 
-.ClashDisplay-Medium{
-  font-family: 'ClashDisplay-Medium' , sans-serif;
+.ClashDisplay-Regular {
+  font-family: 'ClashDisplay-Regular', sans-serif;
 }
 
-.futura-bold{
-  font-family: 'futura-bold' , sans-serif;
-}
-.futura-medium{
-  font-family: 'futura-medium' , sans-serif;
+.ClashDisplay-Bold {
+  font-family: 'ClashDisplay-Bold', sans-serif;
 }
 
-.futura-book{
-  font-family: 'futura-book' , sans-serif;
+.ClashDisplay-Light {
+  font-family: 'ClashDisplay-Light', sans-serif;
+}
+
+.ClashDisplay-Medium {
+  font-family: 'ClashDisplay-Medium', sans-serif;
+}
+
+.futura-bold {
+  font-family: 'futura-bold', sans-serif;
+}
+
+.futura-medium {
+  font-family: 'futura-medium', sans-serif;
+}
+
+.futura-book {
+  font-family: 'futura-book', sans-serif;
 }
 
 
@@ -132,19 +135,21 @@ body {
   background: hsla(0, 0%, 100%, 0.15);
 }
 
-::-webkit-scrollbar-button{
+::-webkit-scrollbar-button {
   height: 60px;
 }
 
 body {
   scroll-behavior: smooth;
 }
+
 .gradient-text {
   background: linear-gradient(90deg, #FF3BFF 0%, #ECBFBB 38%, #5C24FF 76%, #D94FD5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 .gradient-background {
   background: linear-gradient(90deg, #FF3BFF 0%, #ECBFBB 38%, #5C24FF 76%, #D94FD5 100%);
 }
@@ -159,8 +164,10 @@ body {
   overflow: hidden;
   cursor: pointer;
   z-index: 1;
-  width: 100%; /* Ensure the same width */
-  height: 100%; /* Ensure the same height */
+  width: 100%;
+  /* Ensure the same width */
+  height: 100%;
+  /* Ensure the same height */
 }
 
 .gradient-border-button::before {
@@ -173,8 +180,10 @@ body {
   background: linear-gradient(to right, #FF3BFF, #ECBFBF, #5C24FF, #D94FD5);
   border-radius: 32px;
   z-index: -1;
-  transition: background-position 0.3s ease; /* Smooth transition */
-  background-size: 200% 200%; /* Ensures the gradient is large enough to animate */
+  transition: background-position 0.3s ease;
+  /* Smooth transition */
+  background-size: 200% 200%;
+  /* Ensures the gradient is large enough to animate */
 }
 
 .gradient-border-button::after {
@@ -197,28 +206,27 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
-@media (min-width: 640px) {
-  .gradient-border-button:hover::before {
-    animation: gradient-animation 3s linear infinite;
-  }
-  
-}
 .btn {
   overflow: hidden;
   background: transparent;
   cursor: pointer;
   transition: 1s ease;
-  width: 100%; /* Ensure the same width */
-  height: 100%; /* Ensure the same height */
-  border-radius: 30px; /* Match the rounded corners */
+  width: 100%;
+  /* Ensure the same width */
+  height: 100%;
+  /* Ensure the same height */
+  border-radius: 30px;
+  /* Match the rounded corners */
   position: relative;
 }
 
@@ -265,6 +273,7 @@ body {
   top: 61.5px;
   opacity: 1;
 }
+
 .btn:hover .btn-text-one2nd {
   top: 60px;
   opacity: 1;
@@ -275,18 +284,21 @@ body {
 }
 
 .relative-button-container {
-  width: 192px; /* Ensure the same width */
-  height: 55px; /* Ensure the same height */
+  width: 192px;
+  /* Ensure the same width */
+  height: 55px;
+  /* Ensure the same height */
 }
 
-.footer-background{
+.footer-background {
   background-image: url(/footer-img.png);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  
+
 }
-.background-card{
+
+.background-card {
   background-image: url(/side-card.png);
   background-size: 100% 100%;
   background-position: center center;
@@ -295,4 +307,160 @@ body {
 
 ::selection {
   background: #40404000;
+}
+
+
+.run-btn {
+  width: 100%;
+  display: flex;
+  padding-right: 9px;
+  justify-content: end;
+  align-items: center;
+}
+
+.run-btn span {
+  font-weight: 600;
+  cursor: pointer;
+  border: 0;
+  padding: 8px 15px 9px 15px;
+}
+
+.ui-btn {
+  --btn-default-bg: #4c4a4a;
+  --btn-hover-bg: rgb(51, 51, 51);
+  --btn-transition: .3s;
+  --btn-letter-spacing: .1rem;
+  --btn-animation-duration: 1.2s;
+  --btn-shadow-color: rgba(0, 0, 0, 0.137);
+  --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+  --hover-btn-color: #FAC921;
+  --default-btn-color: #c22323;
+  --font-size: 16px;
+  --font-weight: 600;
+  --font-family: Menlo, Roboto Mono, monospace;
+}
+
+/* button settings 👆 */
+
+.ui-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: var(--font-weight) var(--font-size) var(--font-family);
+  background: linear-gradient(90deg, #FF3BFF 0%, #ECBFBB 38%, #5C24FF 76%, #D94FD5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background var(--btn-transition);
+}
+
+.ui-btn span {
+  letter-spacing: var(--btn-letter-spacing);
+  box-sizing: border-box;
+  position: relative;
+  background: inherit;
+  display: inline-block;
+}
+
+.ui-btn span::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "Welcome!";
+  /* Initial welcoming message */
+  background: inherit;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size);
+  opacity: 0;
+  /* Start hidden */
+  transition: opacity var(--btn-transition);
+  animation: chitchat linear both var(--btn-animation-duration) infinite;
+}
+
+@keyframes chitchat {
+  0% {
+    content: "just!";
+    opacity: 1;
+  }
+
+  10% {
+    content: "wait";
+  }
+
+  20% {
+    content: "swift";
+  }
+
+  30% {
+    content: "^{comming}";
+  }
+
+  40% {
+    content: "-!";
+  }
+
+  50% {
+    content: "#$_";
+  }
+
+  60% {
+    content: "№:0";
+  }
+
+  70% {
+    content: "#{+.";
+  }
+
+  80% {
+    content: "@}-?";
+  }
+
+  90% {
+    content: "?{4@%";
+  }
+
+  100% {
+    content: "";
+  }
+}
+
+html {
+  animation: overflow .7s ease 2.55s 1 normal forwards;
+  overflow: hidden;
+}
+
+@keyframes overflow {
+
+  0%,
+  100% {
+    overflow-y: visible;
+    overflow-x: hidden;
+  }
+
+}
+
+.loaderbg {
+
+  animation: fadeloader 1.3s ease 2.5s 1 normal forwards;
+}
+
+@keyframes fadeloader {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -6;
+
+  }
 }

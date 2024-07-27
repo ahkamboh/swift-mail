@@ -4,11 +4,11 @@ import Footer from "./components/Footer";
 import Marquee from 'react-fast-marquee'
 export default function Home() {
   return (
-    <>
+    <div className="relative">
       <Navbar />
       <div className=" 2xl:pt-20 sm:pt-16 pt-4 space-y-5 relative  ">
-      <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[50px] w-full absolute rotate-6 top-0 right-0  -z-10 opacity-90 sm:hidden " />
-       
+        <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[50px] w-full absolute rotate-6 top-0 right-0  -z-10 opacity-90 sm:hidden " />
+
         <div className="ClashDisplay-Medium space-y-3 sm:text-6xl text-4xl text-center">
           <h1 className="gradient-text sm:px-0 px-3">A Fast Generation.</h1>
           <h1>Scaleable AI.</h1>
@@ -38,8 +38,8 @@ export default function Home() {
         <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[80px] w-full absolute rotate-6 sm:-bottom-[450px] -bottom-[150px] -z-10 sm:opacity-75 opacity-100 " />
       </div>
       <div className="w-full  sm:h-20 h-16 sm:mt-32 mt-12 px-5  origin-top-left rotate-[-4.25deg] sm:bg-zinc-900 bg-[#18181b72]  shadow justify-start ClashDisplay- items-center gap-5 inline-flex cursor-pointer relative md:-top-28 -top-8">
-      <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[80px] w-full absolute rotate-6 sm:-bottom-[150px] -bottom-[0px]  -z-10 sm:opacity-75 opacity-90 " />
-      <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[80px] w-full absolute rotate-6 sm:-bottom-[150px] -bottom-[0px] -z-10 sm:opacity-75 opacity-90 " />
+        <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[80px] w-full absolute rotate-6 sm:-bottom-[150px] -bottom-[0px]  -z-10 sm:opacity-75 opacity-90 " />
+        <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[80px] w-full absolute rotate-6 sm:-bottom-[150px] -bottom-[0px] -z-10 sm:opacity-75 opacity-90 " />
         <Marquee direction="left" pauseOnHover >
           <div className="text-white lg:text-3xl text-xl ClashDisplay-Medium ">AI-Powered Emails, Personalized for You</div>
           <img src="/SoftStar.png" alt="star" className='px-4' />
@@ -53,6 +53,24 @@ export default function Home() {
       </div>
       <Footer />
 
-    </>
+      <div className=" loaderbg bg-black absolute w-full h-screen z-50 top-0 flex  items-center justify-center">
+        <div className="d">
+          <div className=' h-14  relative  w-14  object-contain ' >
+            <img alt='discord' src='/ourlogo.gif' />
+          </div>
+          <div className="w-full h-full flex justify-center items-center">
+            <div className="run-btn ">
+              <button className="ui-btn">
+                <span className=""></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   );
 }
+
+
+
