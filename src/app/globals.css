@@ -287,3 +287,6 @@ body {
   background-repeat: no-repeat;
 }
 
+::selection {
+  background: #404040;
+}
