@@ -31,15 +31,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full  h-full flex container mx-auto  justify-center items-center relative 2xl:-top-60 md:-top-44 -top-16 -z-20">
+      <div className="w-full  h-full flex container o mx-auto  justify-center items-center relative 2xl:-top-60 md:-top-44 -top-16 -z-20">
         <img src="/ai-img-1.svg" alt="" className="" />
         <div className="blur-[20px] bottom-[-70px] absolute h-[100px] bg-black w-full"></div>
-        <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[80px] w-full absolute rotate-6 sm:-bottom-[350px] -bottom-[120px]  -z-10 opacity-75 " />
-        <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[80px] w-full absolute rotate-6 sm:-bottom-[450px] -bottom-[150px] -z-10 sm:opacity-75 opacity-100 " />
       </div>
-      <div className="w-full  sm:h-20 h-16 sm:mt-32 mt-12 px-5  origin-top-left rotate-[-4.25deg] sm:bg-zinc-900 bg-[#18181b72]  shadow justify-start ClashDisplay- items-center gap-5 inline-flex cursor-pointer relative md:-top-28 -top-8">
-        <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[80px] w-full absolute rotate-6 sm:-bottom-[150px] -bottom-[0px]  -z-10 sm:opacity-75 opacity-90 " />
-        <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[80px] w-full absolute rotate-6 sm:-bottom-[150px] -bottom-[0px] -z-10 sm:opacity-75 opacity-90 " />
+      <div className="w-full   sm:h-20 h-16 sm:mt-32 mt-12 px-5  origin-top-left rotate-[-4.25deg] sm:bg-zinc-900 bg-[#18181b72]  shadow justify-start ClashDisplay- items-center gap-5 inline-flex cursor-pointer relative md:-top-28 -top-8">
+        <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[80px] left-0 w-full absolute  sm:-bottom-[150px] -bottom-[0px]  -z-10 sm:opacity-75 opacity-90 " />
+        <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[80px] left-0 w-full absolute  sm:-bottom-[150px] -bottom-[0px] -z-10 sm:opacity-75 opacity-90 " />
         <Marquee direction="left" pauseOnHover >
           <div className="text-white lg:text-3xl text-xl ClashDisplay-Medium ">AI-Powered Emails, Personalized for You</div>
           <img src="/SoftStar.png" alt="star" className='px-4' />
