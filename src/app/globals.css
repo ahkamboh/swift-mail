@@ -113,10 +113,11 @@ body {
   font-family: 'futura-book', sans-serif;
 }
 
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+@media (max-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 ::-webkit-scrollbar-track {
@@ -130,6 +131,15 @@ body {
   box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
     inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
 }
+
+
+::-webkit-scrollbar  {
+ 
+  width: 10px;
+  height: 10px;
+}
+
+
 
 ::-webkit-scrollbar-thumb:hover {
   background: hsla(0, 0%, 100%, 0.15);
@@ -442,11 +452,11 @@ html {
 
   0%,
   100% {
-    overflow-y: visible;
-    overflow-x: hidden;
+   overflow-y: visible;
   }
 
 }
+
 
 .loaderbg {
 
