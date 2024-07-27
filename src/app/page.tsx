@@ -16,17 +16,17 @@ export default function Home() {
         <div className="text-base ClashDisplay-Regular capitalize text-center md:block hidden  tracking-wide ">Simply input your desired Revolutionize your outreach with Swift Mail,  <br /> any relevant information, and Swift Mail does the rest. <br />go for this!</div>
         <div className="sm:text-base text-sm px-6 ClashDisplay-Regular capitalize text-center md:hidden  tracking-wide ">Simply input your desired Revolutionize your outreach with Swift Mail, any relevant information, and Swift Mail does the rest , go for this!</div>
         <div className="flex sm:gap-5 gap-3 justify-center items-center pt-3 sm:px-0 px-6">
-          <div className="relative-button-container">
+          <a href="/login"  className="relative-button-container">
             <button className="gradient-border-button ClashDisplay-Regular bg-transparent">Get Started</button>
-          </div>
+          </a>
 
-          <div className="relative-button-container ClashDisplay-Regular text-white ">
+          <a href="/login" className="relative-button-container ClashDisplay-Regular text-white ">
             <button className="btn border-2 border-white text-base tracking-wider">
               <span className="btn-text-one">Sign in</span>
               <span className="btn-text-two text-white">Login</span>
               <div className="bg-btn"></div>
             </button>
-          </div>
+          </a>
 
         </div>
       </div>
