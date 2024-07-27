@@ -36,9 +36,9 @@ function Navbar() {
               </span>
               {/* <a className='sm:block hidden text-white hover:text-blue-500 transition-colors duration-300' href="">Resume</a> 
             </li> */}
-            <li className=' ' >
+            <a href='https://discord.gg/2gXvMj8mC7' target='_blank'  >
               <img alt='discord' src='/discord.svg'/>
-            </li>
+            </a>
           </div>
         </div>
         <div

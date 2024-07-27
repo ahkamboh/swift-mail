@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Navbar />
       <div className=" 2xl:pt-20 sm:pt-16 pt-4 space-y-5 relative  ">
-      <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[50px] w-full absolute rotate-6 top-0 right-0  -z-10 opacity-75 sm:hidden " />
+      <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[50px] w-full absolute rotate-6 top-0 right-0  -z-10 opacity-90 sm:hidden " />
        
         <div className="ClashDisplay-Medium space-y-3 sm:text-6xl text-4xl text-center">
           <h1 className="gradient-text sm:px-0 px-3">A Fast Generation.</h1>
@@ -37,7 +37,9 @@ export default function Home() {
         <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[80px] w-full absolute rotate-6 sm:-bottom-[350px] -bottom-[120px]  -z-10 opacity-75 " />
         <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[80px] w-full absolute rotate-6 sm:-bottom-[450px] -bottom-[150px] -z-10 sm:opacity-75 opacity-100 " />
       </div>
-      <div className="w-full  sm:h-20 h-16 sm:mt-32 mt-12 px-5  origin-top-left rotate-[-4.25deg] bg-zinc-900 shadow justify-start ClashDisplay- items-center gap-5 inline-flex cursor-pointer relative md:-top-28 -top-8">
+      <div className="w-full  sm:h-20 h-16 sm:mt-32 mt-12 px-5  origin-top-left rotate-[-4.25deg] sm:bg-zinc-900 bg-[#18181b72]  shadow justify-start ClashDisplay- items-center gap-5 inline-flex cursor-pointer relative md:-top-28 -top-8">
+      <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[80px] w-full absolute rotate-6 sm:-bottom-[150px] -bottom-[0px]  -z-10 sm:opacity-75 opacity-90 " />
+      <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[80px] w-full absolute rotate-6 sm:-bottom-[150px] -bottom-[0px] -z-10 sm:opacity-75 opacity-90 " />
         <Marquee direction="left" pauseOnHover >
           <div className="text-white lg:text-3xl text-xl ClashDisplay-Medium ">AI-Powered Emails, Personalized for You</div>
           <img src="/SoftStar.png" alt="star" className='px-4' />
