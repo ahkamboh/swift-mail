@@ -189,7 +189,7 @@ body {
   z-index: -1;
 }
 
-.gradient-border-button:hover::before {
+.gradient-border-button::before {
   animation: gradient-animation 3s linear infinite;
 }
 
@@ -205,6 +205,12 @@ body {
   }
 }
 
+@media (min-width: 640px) {
+  .gradient-border-button:hover::before {
+    animation: gradient-animation 3s linear infinite;
+  }
+  
+}
 .btn {
   overflow: hidden;
   background: transparent;
