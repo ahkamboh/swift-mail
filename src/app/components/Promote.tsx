@@ -172,7 +172,7 @@ const Promote: React.FC = () => {
             </select>
           </div>
           <div className="flex justify-end">
-            <button type="submit" className="w-fit p-2  bg-gradient-to-br from-[#f75ad5] bg-cyan-600 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-[#f75ad5]  dark:focus:ring-[#f75ad5] text-white rounded-lg px-16">
+            <button type="submit" className=" mdw-fit w-full p-2  bg-gradient-to-br from-[#f75ad5] bg-cyan-600 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-[#f75ad5]  dark:focus:ring-[#f75ad5] text-white rounded-lg px-16">
               Generate
             </button>
           </div>
