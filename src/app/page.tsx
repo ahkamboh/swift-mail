@@ -2,6 +2,8 @@ import Navbar from "./components/Navbar";
 // import Step from "./components/Step";
 import Footer from "./components/Footer";
 import Marquee from 'react-fast-marquee'
+import Card from "./components/Card";
+import SparklesText from "@/components/magicui/sparkles-text";
 export default function Home() {
   return (
     <div className="relative">
@@ -10,14 +12,14 @@ export default function Home() {
         <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[50px] w-full absolute rotate-6 top-0 right-0  -z-10 opacity-90 sm:hidden " />
 
         <div className="ClashDisplay-Medium space-y-3 sm:text-6xl text-4xl text-center">
-          <h1 className="gradient-text sm:px-0 px-3">A Fast Generation.</h1>
-          <h1>Scaleable AI.</h1>
+          <h1 className="gradient-text sm:px-0 font-semibold  px-3">A Fast Generation.</h1>
+          <SparklesText text="Scaleable AI." className="sm:text-6xl text-4xl" />
         </div>
         <div className="text-base ClashDisplay-Regular capitalize text-center md:block hidden  tracking-wide ">Simply input your desired Revolutionize your outreach with Swift Mail,  <br /> any relevant information, and Swift Mail does the rest. <br />go for this!</div>
         <div className="sm:text-base text-sm px-6 ClashDisplay-Regular capitalize text-center md:hidden  tracking-wide ">Simply input your desired Revolutionize your outreach with Swift Mail, any relevant information, and Swift Mail does the rest , go for this!</div>
         <div className="flex sm:gap-5 gap-3 justify-center items-center pt-3 sm:px-0 px-6">
-          <a href="/login"  className="relative-button-container">
-            <button className="gradient-border-button ClashDisplay-Regular bg-transparent">Get Started</button>
+          <a href="/about"  className="relative-button-container">
+            <button className="gradient-border-button ClashDisplay-Regular bg-transparent">About</button>
           </a>
 
           <a href="/login" className="relative-button-container ClashDisplay-Regular text-white ">
