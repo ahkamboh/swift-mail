@@ -15,12 +15,10 @@ function Page() {
   }, [session, router]);
 
   const handleSignIn = () => {
-    console.log('Signing in...');
     signIn('github', { callbackUrl: '/promote' });
   };
 
   const handleGuest = () => {
-    console.log('Redirecting as guest...');
     router.push('/promote?guest=true');
   };
 
