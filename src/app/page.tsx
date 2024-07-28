@@ -2,7 +2,6 @@ import Navbar from "./components/Navbar";
 // import Step from "./components/Step";
 import Footer from "./components/Footer";
 import Marquee from 'react-fast-marquee'
-import Card from "./components/Card";
 import SparklesText from "@/components/magicui/sparkles-text";
 export default function Home() {
   return (
