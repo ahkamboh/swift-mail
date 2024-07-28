@@ -16,7 +16,7 @@ function Navbar() {
               <img alt='discord' src='/ourlogo.gif'/>
             </div>
             <div className="w-[90px] sm:scale-125 scale-100 relative tracking-widest">
-              <h1> SwiftMail</h1>
+            <h1>SwiftMail<sup className='text-cyan-700 text-[6px] relative -top-3 bg-white rounded-md p-0.5 ClashDisplay-Regular '>Beta</sup></h1>
               <img src="/gradient.png"  alt="gradient" className='w-full absolute top-2 -z-20'/>
             </div>
           </div> 
