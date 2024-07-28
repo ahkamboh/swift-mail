@@ -1,4 +1,4 @@
-"use client";// SignInPage.js
+"use client";
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { signIn, useSession } from 'next-auth/react';

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import SideBar from "../components/SideBar";
 import Promote from "../components/Promote";
@@ -7,6 +7,25 @@ import Promote from "../components/Promote";
 function Page() {
   const { data: session } = useSession();
   const [isSidebarVisible, setSidebarVisible] = useState(true);
+
+  // Use effect to set initial state based on screen size
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    if (mediaQuery.matches) {
+      setSidebarVisible(false);
+    }
+
+    const handleResize = () => {
+      if (mediaQuery.matches) {
+        setSidebarVisible(false);
+      } else {
+        setSidebarVisible(true);
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleResize);
+    return () => mediaQuery.removeEventListener("change", handleResize);
+  }, []);
 
   const toggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);
@@ -16,9 +35,10 @@ function Page() {
     <>
       <div className="w-full bg-[#1e1e1e]">
         <div className="flex h-screen relative">
-          <button title="click for Sidebar"
+          <button
+            title="click for Sidebar"
             onClick={toggleSidebar}
-            className="h-10 rounded-lg px-2 hover:text-[#f75ad5] transition-colors duration-300  absolute top-3 text-token-text-secondary focus-visible:outline-0 hover:bg-token-sidebar-surface-secondary focus-visible:bg-token-sidebar-surface-secondary z-50"
+            className="h-10 rounded-lg px-2 hover:text-[#f75ad5] transition-colors duration-300 absolute top-3 text-token-text-secondary focus-visible:outline-0 hover:bg-token-sidebar-surface-secondary focus-visible:bg-token-sidebar-surface-secondary z-50"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +56,7 @@ function Page() {
               ></path>
             </svg>
           </button>
-          <div className="flex  justify-between items-center p-2 bg-[#1e1e1e] px-4 border-b fixed top-0 w-full z-20">
+          <div className="flex justify-between items-center p-2 bg-[#1e1e1e] px-4 border-b fixed top-0 w-full z-20">
             <div className="ClashDisplay-Regular">
               <span className={`transition-all duration-300 ease-in-out ${isSidebarVisible ? "pl-64" : "pl-12"}`}>
                 {session?.user?.name || "Guest User"}
@@ -59,14 +79,12 @@ function Page() {
             )}
           </div>
           <div
-            className={`${isSidebarVisible ? "translate-x-0" : "-translate-x-full"
-              } transition-transform duration-300 ease-in-out fixed inset-y-0 left-0 w-64  bg-[#1e1e1e] z-20`}
+            className={`${isSidebarVisible ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out fixed inset-y-0 left-0 w-64 bg-[#1e1e1e] z-20`}
           >
             <SideBar />
           </div>
           <div
-            className={`flex-1 transition-all duration-300 ease-in-out ${isSidebarVisible ? "ml-64 md:ml-1/4 lg:ml-1/5" : "ml-0"
-              }`}
+            className={`flex-1 transition-all duration-300 ease-in-out ${isSidebarVisible ? "ml-64 md:ml-1/4 lg:ml-1/5" : "ml-0"}`}
           >
             <div className="mt-12 h-[calc(100vh-3rem)] overflow-y-auto">
               <Promote />
