@@ -31,7 +31,7 @@ function Page() {
         });
 
         if (response.ok) {
-          document.cookie = `guestEmail=${email}; path=/login;`;
+          document.cookie = `guestEmail=${email}; path=/;`;
           router.push('/promote?guest=true');
         } else {
           const data = await response.json();
