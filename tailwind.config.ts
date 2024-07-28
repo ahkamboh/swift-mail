@@ -6,6 +6,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  
   theme: {
     extend: {
       backgroundImage: {
@@ -19,8 +20,35 @@ const config: Config = {
         'custom-blue': '#5C24FF',
         'custom-purple': '#D94FD5',
       },
+      keyframes: {
+        "shine-pulse": {
+          "0%": {
+            "background-position": "0% 0%",
+          },
+          "50%": {
+            "background-position": "100% 100%",
+          },
+          to: {
+            "background-position": "0% 0%",
+          },
+        },
+        gradient: {
+          to: {
+            backgroundPosition: "var(--bg-size) 0",
+          }
+        },
+        grid: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        grid: "grid 15s linear infinite",
+        gradient: "gradient 8s linear infinite",
+      },
     },
   },
+  
   plugins: [],
 };
 export default config;
