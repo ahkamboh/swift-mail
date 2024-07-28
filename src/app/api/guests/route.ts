@@ -1,17 +1,6 @@
+// pages/api/guests/route.ts
 import { NextRequest, NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
-
-// PrismaClient initialization as a singleton
-let prisma: PrismaClient;
-
-if (process.env.NODE_ENV === 'production') {
-  prisma = new PrismaClient();
-} else {
-  if (!(global as any).prisma) {
-    (global as any).prisma = new PrismaClient();
-  }
-  prisma = (global as any).prisma;
-}
+import prisma from '../../../lib/prisma'; // Adjust the path based on your directory structure
 
 export async function POST(req: NextRequest) {
   try {
@@ -22,9 +11,7 @@ export async function POST(req: NextRequest) {
     }
 
     const guest = await prisma.guestUser.create({
-      data: {
-        email,
-      },
+      data: { email },
     });
 
     return NextResponse.json(guest, { status: 201 });
@@ -39,7 +26,6 @@ export async function POST(req: NextRequest) {
   }
 }
 
-// Optionally, you can add a GET method if you need to retrieve guest users
 export async function GET() {
   try {
     const guests = await prisma.guestUser.findMany();
