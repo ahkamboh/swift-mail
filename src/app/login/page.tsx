@@ -1,14 +1,15 @@
 "use client";
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { signIn, useSession } from 'next-auth/react';
 
-function Page() {
+const Page: React.FC = () => {
   const router = useRouter();
   const { data: session } = useSession();
+  const [email, setEmail] = useState<string>('');
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Redirect to the promote page if the user is already authenticated
     if (session) {
       router.push('/promote');
     }
@@ -18,8 +19,29 @@ function Page() {
     signIn('github', { callbackUrl: '/promote' });
   };
 
-  const handleGuest = () => {
-    router.push('/promote?guest=true');
+  const handleGuest = async () => {
+    if (email) {
+      try {
+        const response = await fetch('/api/guests', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email }),
+        });
+
+        if (response.ok) {
+          document.cookie = `guestEmail=${email}; path=/;`;
+          router.push('/promote?guest=true');
+        } else {
+          setError('Failed to register as a guest');
+        }
+      } catch (error) {
+        setError('Failed to register as a guest');
+      }
+    } else {
+      setError('Please enter your email');
+    }
   };
 
   return (
@@ -43,6 +65,7 @@ function Page() {
         >
           Continue as Guest
         </button>
+        {error && <p className="text-red-500">{error}</p>}
         <div className="flex items-center space-x-2">
           <hr className="flex-1 border-muted-foreground" />
           <span className="text-sm text-muted-foreground ClashDisplay-Regular">or register with your email</span>
@@ -56,12 +79,17 @@ function Page() {
               type="email"
               id="email"
               placeholder="ahk@alihamzakamboh.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
         </form>
-        <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/90 h-10 px-4 py-2 w-full bg-[#129dbc] text-white">
+        <button 
+          onClick={handleGuest} 
+          className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/90 h-10 px-4 py-2 w-full bg-[#129dbc] text-white"
+        >
           Continue{" "}
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="ml-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2">
             <path d="M5 12h14"></path>
             <path d="m12 5 7 7-7 7"></path>
           </svg>
@@ -77,6 +105,6 @@ function Page() {
       </div>
     </div>
   );
-}
+};
 
 export default Page;
