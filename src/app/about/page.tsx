@@ -30,14 +30,14 @@ function page() {
                     </AnimatedGradientText>
                 </div>
 
-                <div className="ClashDisplay-Medium space-y-3 sm:text-6xl text-4xl text-center pt-10">
-                    <SparklesText text="Our cutting-edge AI. powered " className="sm:text-6xl  text-4xl" />
+                <div className="ClashDisplay-Medium space-y-3 sm:text-6xl text-4xl px-4 text-center pt-10">
+                    <SparklesText text="Our cutting-edge AI. powered " className="sm:text-6xl   text-4xl" />
                     <h1 className="gradient-text sm:px-0 font-semibold  px-3">SwiftMail </h1>
                 </div>
-                <p className='ClashDisplay-Regular container mx-auto text-center py-6  sm:w-[600px] w-full sm:px-0 px-5'> SwiftMail—our cutting-edge AI-powered email generation service. Whether you’re a seasoned user or just getting started, this is the place to ask questions, share insights, and connect with fellow SwiftMail enthusiasts.
+                <p className='ClashDisplay-Regular container mx-auto text-center py-6  sm:w-[600px] w-full sm:px-0 px-5 sm:text-base text-sm'> SwiftMail—our cutting-edge AI-powered email generation service. Whether you’re a seasoned user or just getting started, this is the place to ask questions, share insights, and connect with fellow SwiftMail enthusiasts.
                 </p>
 
-                <div className="container mx-auto px-8  py-32">
+                <div className="container mx-auto px-8  sm:py-32 py-24">
                     <div className="flex md:flex-row flex-col md:gap-4  justify-between items-center gap-16">
                         <div className="grid justify-center items-center text-current ">
                             <span className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b drop-shadow-[0_0_10px_rgba(236,72,153,0.8)]  via-[#ff5bd4] from-[#19bfff] to-[#8c1eff] ClashDisplay-Semibold bg-clip-text text-center text-7xl font-bold leading-none tracking-tighter text-transparent">
@@ -76,24 +76,28 @@ function page() {
                             role="Co-Creator"
                             description="@SwiftMail | CS Student"
                             image="/p1.png"
+                            linkeidn="https://www.linkedin.com/in/ahkamboh/"
                         />
                         <Card
                             name="Syeda Fatima"
                             role="Co-Creator"
                             description="@SwiftMail | CS Student"
                             image="/p2.png"
+                            linkeidn="https://www.linkedin.com/in/syeda-fatima-tu-zahra-940784250"
                         />
                         <Card
                             name="Wasif Umair"
                             role="Co-Creator"
                             description="@SwiftMail | CS Student"
                             image="/p3.png"
+                            linkeidn="https://www.linkedin.com/in/wasif-umair"
                         />
                         <Card
                             name="Ayesha Ejaz "
                             role="Co-Creator"
                             description="@SwiftMail | CS Student"
                             image="/p4.png"
+                            linkeidn="https://www.linkedin.com/in/ayesha-ejaz-59ba4a280"
                         />
                     </div>
                 </div>
