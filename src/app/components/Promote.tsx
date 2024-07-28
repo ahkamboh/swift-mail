@@ -89,22 +89,24 @@ const Promote: React.FC = () => {
         <form onSubmit={handleSubmit} autoComplete='off'>
           <div className="flex flex-wrap gap-2 w-full">
             <div className="mb-4 flex-1 min-w-[200px] max-w-full">
-              <label htmlFor="from" className="block text-white mb-2">From</label>
+              <label htmlFor="from" className="block text-white mb-2 ClashDisplay-Regular">From</label>
               <input
+                placeholder='Ali Hamza'
                 type="text"
                 id="from"
                 name="from"
                 value={formData.from}
                 onChange={handleInputChange}
-                className="w-full p-2 border border-[#575757] rounded-lg bg-transparent"
+                className="w-full p-2 border border-[#575757] text-zinc-500 rounded-lg bg-transparent"
               />
             </div>
             <div className="mb-4 flex-1 min-w-[200px] max-w-full">
-              <label htmlFor="to" className="block text-white mb-2">To</label>
+              <label htmlFor="to" className="block text-white mb-2 ClashDisplay-Regular">To</label>
               <input
                 type="text"
                 id="to"
                 name="to"
+                placeholder='Syeda Fatima'
                 value={formData.to}
                 onChange={handleInputChange}
                 className="w-full p-2 border border-[#575757] rounded-lg bg-transparent"
@@ -113,51 +115,55 @@ const Promote: React.FC = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="companyName" className="block text-white mb-2">Company Name</label>
+            <label htmlFor="companyName" className="block text-white mb-2 ClashDisplay-Regular">Company Name</label>
             <input
               type="text"
               id="companyName"
               name="companyName"
+              placeholder='Kamboh div'
               value={formData.companyName}
               onChange={handleInputChange}
               className="w-full p-2 border border-[#575757] rounded-lg bg-transparent"
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="context" className="block text-white mb-2">Context</label>
+            <label htmlFor="context" className="block text-white mb-2 ClashDisplay-Regular">Context</label>
             <input
               type="text"
               id="context"
               name="context"
+              placeholder='Saw Wasif Umair LinkedIn profile'
               value={formData.context}
               onChange={handleInputChange}
               className="w-full p-2 border border-[#575757] rounded-lg bg-transparent"
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="purpose" className="block text-white mb-2">Purpose</label>
+            <label htmlFor="purpose" className="block text-white mb-2 ClashDisplay-Regular">Purpose</label>
             <textarea
               id="purpose"
               name="purpose"
               rows={5}
+              placeholder='Ask about the UI designer job opening at his company. I am entry- level UI designer looking for the first job. I have done online courses. Introduce me to get a job or internship at his company.'
               value={formData.purpose}
               onChange={handleInputChange}
               className="w-full p-2 border border-[#575757] rounded-lg bg-transparent"
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="tone" className="block text-white mb-2">Tone</label>
+            <label htmlFor="tone" className="block text-white mb-2 ClashDisplay-Regular">Tone</label>
             <input
               type="text"
               id="tone"
               name="tone"
+              placeholder='Friendly'
               value={formData.tone}
               onChange={handleInputChange}
               className="w-full p-2 border border-[#575757] rounded-lg bg-transparent"
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="wordCount" className="block text-white mb-2">Word Count</label>
+            <label htmlFor="wordCount" className="block text-white mb-2 ClashDisplay-Regular">Word Count</label>
             <select
               id="wordCount"
               name="wordCount"
@@ -165,14 +171,14 @@ const Promote: React.FC = () => {
               onChange={handleInputChange}
               className="w-full p-2 border border-[#575757] rounded-lg bg-transparent"
             >
-              <option className='text-black' value="100-200">100-200 words</option>
-              <option className='text-black' value="201-300">200-300 words</option>
-              <option className='text-black' value="301-400">300-400 words</option>
-              <option className='text-black' value="401-500">400-500 words</option>
+              <option className='text-black ClashDisplay-Regular' value="100-200">100-200 words</option>
+              <option className='text-black ClashDisplay-Regular' value="201-300">200-300 words</option>
+              <option className='text-black ClashDisplay-Regular' value="301-400">300-400 words</option>
+              <option className='text-black ClashDisplay-Regular' value="401-500">400-500 words</option>
             </select>
           </div>
           <div className="flex justify-end">
-            <button type="submit" className=" mdw-fit w-full p-2  bg-gradient-to-br from-[#f75ad5] bg-cyan-600 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-[#f75ad5]  dark:focus:ring-[#f75ad5] text-white rounded-lg px-16">
+            <button type="submit" className=" mdw-fit w-full ClashDisplay-Regular p-2  bg-gradient-to-br from-[#f75ad5] bg-cyan-600 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-[#f75ad5]  dark:focus:ring-[#f75ad5] text-white rounded-lg px-16">
               Generate
             </button>
           </div>
