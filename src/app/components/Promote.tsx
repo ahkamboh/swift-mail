@@ -4,13 +4,13 @@ import ReactMarkdown from 'react-markdown';
 
 const Promote: React.FC = () => {
   const [formData, setFormData] = useState({
-    from: 'Rehmat Ali',
-    to: 'Abu bakar',
-    companyName: 'Google',
-    context: 'for linkedin aware post for developers',
-    purpose: 'I want to write this email to Abubakar the manager of Google so I want to request do post about the DevOps interview when happens.',
-    tone: 'aggressive',
-    wordCount: '100-250' // Default word count range
+    from: '',
+    to: '',
+    companyName: '',
+    context: '',
+    purpose: '',
+    tone: '',
+    wordCount: '' // Default word count range
   });
   const [generatedContent, setGeneratedContent] = useState<string>('');
   const [error, setError] = useState<string>('');
@@ -84,7 +84,7 @@ const Promote: React.FC = () => {
   };
 
   return (
-    <div className="grid grid-cols-12 gap-4 p-4">
+    <div className="grid grid-cols-12 gap-4 p-4   ">
       <div className="col-span-12 md:col-span-7 py-10 px-5 w-full">
         <form onSubmit={handleSubmit} autoComplete='off'>
           <div className="flex flex-wrap gap-2 w-full">
@@ -172,7 +172,7 @@ const Promote: React.FC = () => {
             </select>
           </div>
           <div className="flex justify-end">
-            <button type="submit" className="w-fit p-2 bg-[#129dbc] text-white rounded-lg px-16">
+            <button type="submit" className="w-fit p-2  bg-gradient-to-br from-[#f75ad5] bg-cyan-600 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-[#f75ad5]  dark:focus:ring-[#f75ad5] text-white rounded-lg px-16">
               Generate
             </button>
           </div>
@@ -180,14 +180,14 @@ const Promote: React.FC = () => {
         </form>
       </div>
 
-      <div className="col-span-12 md:col-span-5 border-l p-4 space-y-2 h-screen">
+      <div className="col-span-12 md:col-span-5 md:border-l p-4 space-y-2 ">
         <div className="grid place-items-center text-center">
           {!loading && !generatedContent && (
             <>
               <div className="w-48 h-48 flex  flex-col items-center justify-center">
                 <img src="ourlogo.png" alt="Email Genie" className="max-w-full max-h-full" />
               </div>
-              <div className="mt-4">Your copies created by artificial intelligence will appear here.</div>
+              <div className="mt-4">Your copies created by Swift Mail will appear here.</div>
             </>
           )}
           {loading && (
