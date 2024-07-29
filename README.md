@@ -1,6 +1,6 @@
 # SwiftMail
 
-Welcome to **SwiftMail**, your AI-powered solution for writing cold emails efficiently. Our app is now fully completed and live at [swift-mail.vercel.app](https://swift-mail.vercel.app).
+Welcome to **SwiftMail**, your AI-powered solution for writing cold emails efficiently. We are excited to announce the launch of our **beta version**, now live at [swift-mail.vercel.app](https://swift-mail.vercel.app).
 
 ## About SwiftMail
 
@@ -12,9 +12,15 @@ SwiftMail is designed to help you craft professional and effective cold emails w
 - **User-Friendly Interface**: Simple and intuitive design for a seamless experience.
 - **Customization Options**: Fine-tune your message for maximum impact.
 
+## Benefits
+
+- **Efficiency**: Save time by letting SwiftMail handle the email writing process.
+- **Professionalism**: Ensure your emails are well-crafted and professional.
+- **Personalization**: Tailor your emails to suit your audience and purpose.
+
 ## Get Started
 
-Join us today at [swift-mail.vercel.app](https://swift-mail.vercel.app) and experience the future of email writing with SwiftMail.
+Join us today at [swift-mail.vercel.app](https://swift-mail.vercel.app) and experience the future of email writing with SwiftMail. As we are in the beta phase, we highly value your feedback to help us improve and refine our app.
 
 Thank you for your support and stay tuned for more exciting updates!
 
