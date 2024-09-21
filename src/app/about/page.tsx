@@ -69,7 +69,7 @@ function page() {
                 </div>
                 <SparklesText text="Our Team" className="sm:text-6xl text-center ClashDisplay-Medium  text-4xl" />
                 <div className="min-h-screen flex items-center justify-center relative    xl:my-0 my-28 px-6 ">
-                    <div className="grid md:grid-cols-2 grid-cols-1  xl:grid-cols-4 gap-8">
+                    <div className="grid md:grid-cols-2 grid-cols-1   gap-8">
                     <img src="/ai-img-1.svg" alt="gradient blur" className="blur-[80px] left-0 w-full absolute -top-16 -z-10   " />
                         <Card
                             name="ahkamboh"
