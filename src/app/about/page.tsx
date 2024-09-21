@@ -85,20 +85,6 @@ function page() {
                             image="/p2.png"
                             linkeidn="https://www.linkedin.com/in/syeda-fatima-tu-zahra-940784250"
                         />
-                        <Card
-                            name="Wasif Umair"
-                            role="Co-Creator"
-                            description="@SwiftMail | CS Student"
-                            image="/p3.png"
-                            linkeidn="https://www.linkedin.com/in/wasif-umair"
-                        />
-                        <Card
-                            name="Ayesha Ejaz "
-                            role="Co-Creator"
-                            description="@SwiftMail | CS Student"
-                            image="/p4.png"
-                            linkeidn="https://www.linkedin.com/in/ayesha-ejaz-59ba4a280"
-                        />
                     </div>
                 </div>
 
